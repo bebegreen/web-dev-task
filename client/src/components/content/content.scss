@@ -1,0 +1,43 @@
+.diagonal { 
+  position: absolute; 
+  top: -177px; 
+
+  height: 177px; 
+  background: white; 
+  width: 100%; 
+  clip-path: polygon(0% 100%, 100% 0, 100% 100%, 0% 100%); 
+}
+
+main { 
+  position: relative;
+    
+  .content { 
+    margin: 0 auto;
+    max-width: 900px; 
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 40px; 
+    .start-now-btn {
+      padding: 1em; 
+      display: inline-block; 
+    }
+
+
+    .text { 
+      padding: 0 4vw; 
+    }
+    .title { 
+      margin: 0; 
+      font-size: 30px; 
+    }
+    
+    img {
+      width: 50%; 
+    }
+
+    a {
+      text-decoration: none; 
+    }
+
+  }
+}

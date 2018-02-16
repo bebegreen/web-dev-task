@@ -4,12 +4,14 @@
 }
 
 .jumbotron { 
-  height: 412px; 
-  background: #231f20 url(https://cdn.sisense.com/wp-content/uploads/sisense-6-6-real-time-analytics.jpg) no-repeat center bottom;
+  height: 600px; 
+  background: #231f20 url('../../assets/images/jumbo.jpg') no-repeat center center fixed;
+  background-size: 100%; 
+
   .shadow { 
     padding: 34px; 
     height: 100%; 
-    background: rgba(0, 0, 0, 0.3); 
+    background: rgba(0, 0, 0, 0.7); 
     text-align: center; 
     color: white; 
 
