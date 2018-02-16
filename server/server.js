@@ -17,18 +17,4 @@ app.use(cookieParser());
 
 app.use('/api/sisense', sisenseApi);
 
-
-// app.post('/api/sisense', (req, res) {
-//   res.send('hi'); 
-// });
-
-// app.get('api/sisense', (req, res) => { 
-
-// })
-
-
-
-
-
-
 module.exports = app;
