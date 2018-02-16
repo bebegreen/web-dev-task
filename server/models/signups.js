@@ -9,7 +9,7 @@ exports.signup = (user) => {
 
 exports.getAllSignups = () => { 
   return connection.then(db => { 
-    return db.collection('signups').find({}); 
+    return db.collection('signups').find({}).toArray(); 
   })
 }
 
