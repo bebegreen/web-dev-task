@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const sisenseApi = require('./routes/sisense.api');
-const dbConfig = require('./models/config/db.conf')();
+require('./models/config/db.conf')();
 const app = express();
 
 app.use(logger('dev'));

@@ -12,4 +12,4 @@ async function connectToDB() {
   }
 }
 
-module.exports = createDB;
+module.exports = connectToDB;
