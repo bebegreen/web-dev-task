@@ -4,10 +4,8 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-// const usersApi = require('./routes/users.js');
-// const locations = require('./routes/locations.js');
-// const validate = require('./controllers/validate.controller.js').validate;
-// const dbConfig = require('./models/config/db.conf.js')();
+const sisenseApi = require('./routes/sisense.api');
+const dbConfig = require('./models/config/db.conf')();
 const app = express();
 
 app.use(logger('dev'));
@@ -17,13 +15,16 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
+app.use('/api/sisense', sisenseApi);
 
-// app.use('/api/locations', locations);
-// app.use('/api/users', usersApi);
 
-app.get('/hi', function (req, res) {
-  res.send('hi'); 
-});
+// app.post('/api/sisense', (req, res) {
+//   res.send('hi'); 
+// });
+
+// app.get('api/sisense', (req, res) => { 
+
+// })
 
 
 
