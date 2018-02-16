@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dialog from 'material-ui/Dialog';
+import axios from 'axios'; 
 import Header from './components/header/Header';
 import Jumbotron from './components/jumbotron/Jumbotron';
 import Footer from './components/footer/Footer';
 import ContactForm from './components/contactForm/ContactForm';
 
+import { SERVER_URL } from './constants/constants'; 
 import { validateEmail } from './utils/validation';
 import './App.css';
 
@@ -19,7 +21,10 @@ class App extends Component {
       timeFrame: ''
     },
     errorText: '', 
-    invalidEmailError: ''
+    invalidEmailError: '', 
+    loading: false, 
+    success: false, 
+    error: false
   }
 
   toggleModal() {
@@ -54,9 +59,18 @@ class App extends Component {
     }
   }
 
-  postSubmition() { 
+  async postSubmition() { 
     const { formValues } = this.state; 
-    console.log(formValues); 
+    console.log(formValues);
+    try { 
+      this.setState({loading: true})
+      const httpRes = await axios.post(SERVER_URL, formValues);
+      this.setState({ loading: false, success: true }); 
+    } catch (err) { 
+      //handle error
+      console.log(err); 
+      this.setState({loading: false, error: true})
+    }
   }
 
   render() {
@@ -79,6 +93,15 @@ class App extends Component {
               onValueChange={this.handleInputChange.bind(this)}
               onSubmit={this.handleFormSubmit.bind(this)}
             />
+
+            { 
+              this.state.loading &&
+              <h1>loading...</h1>
+            }
+            { 
+              this.state.error && 
+              <h1>error occured</h1>
+            }
           </Dialog>
         </div>
       </MuiThemeProvider>

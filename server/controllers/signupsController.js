@@ -10,6 +10,21 @@ exports.signup = async function (req, res) {
   }
 }
 
+exports.getAllSignups = async function (req, res) { 
+  try { 
+    const signups = await signupsModel.getAllSignups(); 
+    res.json(signups); 
+  } catch (err) { 
+    res.sendStatus(500); 
+  }
+}
+
+
+
+
+
+
+
 exports.login = (req, res) => {
  
   const { email, password } = req.body; 

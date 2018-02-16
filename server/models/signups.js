@@ -7,6 +7,18 @@ exports.signup = (user) => {
   })
 }
 
+exports.getAllsignups = () => { 
+  return connection.then(db => { 
+    return db.collection('signups').find({}); 
+  })
+}
+
+
+
+
+
+
+
 
 
 exports.register = (user) => {
