@@ -1,0 +1,21 @@
+
+.footer { 
+  height: 80px; 
+  background: #202020; 
+  color: white; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 30px; 
+  
+  p { 
+    margin: 0; 
+  }
+  ul { 
+    display: flex; 
+    list-style: none; 
+    li { 
+      margin-left: 4vw; 
+    }
+  }
+}

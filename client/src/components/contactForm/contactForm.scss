@@ -1,0 +1,21 @@
+.contact-form { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  h1 { 
+    margin: 0; 
+  }
+  .get-started-btn { 
+    background: #ffcb05; 
+    cursor: pointer;
+    padding: 1em; 
+    margin-top: 10px; 
+    border-radius: 4px; 
+    transition: all 0.35s; 
+    &:hover{ 
+      background: #ac8808;
+      color: white; 
+    }
+  }
+}

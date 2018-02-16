@@ -1,0 +1,25 @@
+{
+  "name": "find-a-job",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "browserify": "^14.4.0",
+    "chai": "^4.1.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-validation": "^1.0.2",
+    "joi": "^13.0.1",
+    "mongodb": "^2.2.31",
+    "morgan": "~1.8.1",
+    "nodemon": "latest",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

@@ -1,0 +1,29 @@
+.header { 
+  height: 60px; 
+  display: flex; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 30px; 
+  
+  .logo { 
+    height: 50%; 
+  }
+
+  nav {
+    ul { 
+      display: flex; 
+      list-style: none; 
+      font-size: 15px;
+      li { 
+        padding-left: 2.6vw;
+      }
+    }
+  } 
+}
+.start-now-btn { 
+  background: #ffcb05; 
+  padding: 3px 1vw; 
+  border-radius: 4px; 
+  cursor: pointer;
+}
