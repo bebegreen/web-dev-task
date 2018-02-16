@@ -1,5 +1,4 @@
 const joi = require('joi');
-const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 const schema = Joi.object().keys({
