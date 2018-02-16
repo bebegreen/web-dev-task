@@ -15,6 +15,7 @@ exports.getAllSignups = async function (req, res) {
     const signups = await signupsModel.getAllSignups(); 
     res.json(signups); 
   } catch (err) { 
+    console.log(err); 
     res.sendStatus(500); 
   }
 }
