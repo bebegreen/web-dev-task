@@ -2,7 +2,9 @@
 const connection = require('./config/dbUrl.js').connection;
 
 exports.signup = (user) => {
-  return db.collection('signups').insertOne(user); 
+  return connection.then(db => { 
+    return db.collection('signups').insertOne(user); 
+  })
 }
 
 
