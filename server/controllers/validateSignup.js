@@ -2,8 +2,8 @@ const Joi = require('joi');
 const saltRounds = 10;
 
 const schema = Joi.object().keys({
-  firstname: Joi.string(),
-  lastname: Joi.string(),
+  firstName: Joi.string(),
+  lastName: Joi.string(),
   email: Joi.string().email(),
   timeFrame: Joi.number(),
 
