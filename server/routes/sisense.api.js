@@ -8,8 +8,8 @@ router.get('/hi', (req, res) => {
 }); 
 
 
-router.post('/', validate, usersCtrl.register); 
-router.post('/login', usersCtrl.login); 
+// router.post('/', validate, usersCtrl.register); 
+// router.post('/login', usersCtrl.login); 
 
 
 module.exports = router; 
