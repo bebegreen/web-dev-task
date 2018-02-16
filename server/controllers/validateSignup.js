@@ -10,7 +10,7 @@ const schema = Joi.object().keys({
 }).with('firstName', 'lastName', 'email', 'timeFrame')
 
 exports.validate = (req, res, next) => {
-  joi.validate(req.body, schema, (err, value) => {
+  Joi.validate(req.body, schema, (err, value) => {
     if (err) {
       console.log(err);
       res.sendStatus(400);
