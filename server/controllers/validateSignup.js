@@ -1,4 +1,4 @@
-const joi = require('joi');
+const Joi = require('joi');
 const saltRounds = 10;
 
 const schema = Joi.object().keys({
