@@ -7,7 +7,7 @@ exports.signup = (user) => {
   })
 }
 
-exports.getAllsignups = () => { 
+exports.getAllSignups = () => { 
   return connection.then(db => { 
     return db.collection('signups').find({}); 
   })
