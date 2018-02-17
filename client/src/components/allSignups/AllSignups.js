@@ -43,8 +43,9 @@ export default class AllSignups extends Component {
           </TableHeader>
           <TableBody>
             {
+              loading &&
               <div style={{ textAlign: 'center' }}>
-              <BeatLoader loading={loading} />
+                <BeatLoader />
               </div>
             }
             {

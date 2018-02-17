@@ -1,5 +1,6 @@
 import React from 'react';
 import './jumbotron.scss';
+import { Link } from 'react-router-dom'; 
 
 const Jumbotron = () => (
   <div className='jumbotron'>
@@ -26,7 +27,7 @@ const Jumbotron = () => (
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
       </p>
       <div className='button'>
-        Watch Demo
+        <Link to={'/signups'} > Get list of all signups </Link>
       </div>
     </div>
   </div>
