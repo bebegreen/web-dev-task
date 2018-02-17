@@ -10,24 +10,26 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
+import './AllSignups.scss';
 
-import './AllSignups.scss'; 
 export default class AllSignups extends Component {
   state = {
-    signups: []
+    signups: null,
+    loading: false
   }
 
   async componentDidMount() {
     try {
+      this.setState({ loading: true }); 
       const httpRes = await axios.get(SERVER_URL);
-      this.setState({ signups: httpRes.data })
-      console.log(httpRes.data);
+      this.setState({ signups: httpRes.data, loading: false })
     } catch (err) {
       console.log(err);
     }
   }
 
   render() {
+    const { signups, loading } = this.state;
     return (
       <div className='signups'>
         <Table selectable={false}>
@@ -41,16 +43,22 @@ export default class AllSignups extends Component {
           </TableHeader>
           <TableBody>
             {
-              this.state.signups.map(user => (
+              <div style={{ textAlign: 'center' }}>
+              <BeatLoader loading={loading} />
+              </div>
+            }
+            {
+              signups &&
+              signups.map(user => (
                 <TableRow>
                   <TableRowColumn>{user.firstName}</TableRowColumn>
                   <TableRowColumn>{user.lastName}</TableRowColumn>
                   <TableRowColumn>{user.email}</TableRowColumn>
-                  <TableRowColumn>{TIME_FRAMES[user.timeFrame]}</TableRowColumn>                  
+                  <TableRowColumn>{TIME_FRAMES[user.timeFrame]}</TableRowColumn>
                 </TableRow>
-            ))  
-          }
-          
+              ))
+            }
+
           </TableBody>
         </Table>
       </div>
