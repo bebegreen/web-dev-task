@@ -1,15 +1,32 @@
-.diagonal { 
-  position: absolute; 
-  top: -177px; 
-
-  height: 177px; 
-  background: white; 
-  width: 100%; 
-  clip-path: polygon(0% 100%, 100% 0, 100% 100%, 0% 100%); 
-}
-
 main { 
   position: relative;
+  
+  .diagonal { 
+    position: absolute; 
+    top: -177px; 
+
+    height: 177px; 
+    background: white; 
+    width: 100%; 
+    clip-path: polygon(0% 100%, 100% 0, 100% 100%, 0% 100%); 
+  }
+
+  .rotated { 
+    line-height: 40px; 
+    font-size: 50px; 
+    transform: rotate(90deg); 
+    color: #dfdede; 
+    position: absolute; 
+    right: -8px; 
+    top: -73px; 
+    font-family: jumboTitle; 
+    span {
+      position: relative; 
+      left: 28px;  
+    }
+  }
+
+
     
   .content { 
     margin: 0 auto;

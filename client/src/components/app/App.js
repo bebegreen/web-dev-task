@@ -5,19 +5,18 @@ import axios from 'axios';
 import { BeatLoader } from 'react-spinners';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
-import Header from './components/header/Header';
-import Jumbotron from './components/jumbotron/Jumbotron';
-import Footer from './components/footer/Footer';
-import Content from './components/content/Content';
-import ContactForm from './components/contactForm/ContactForm';
-import AllSignups from './components/allSignups/AllSignups'; 
+import Header from '../header/Header';
+import Jumbotron from '../jumbotron/Jumbotron';
+import Footer from '../footer/Footer';
+import Content from '../content/Content';
+import ContactForm from '../contactForm/ContactForm';
+import AllSignups from '../allSignups/AllSignups'; 
 
-import { SERVER_URL } from './constants/constants';
-import { validateEmail } from './utils/validation';
+import { SERVER_URL } from '../../constants/constants';
+import { validateEmail } from '../../utils/validation';
 import './App.scss';
 
 class App extends Component {

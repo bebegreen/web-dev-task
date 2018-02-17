@@ -1,9 +1,8 @@
 import React from 'react';
 import './header.scss';
-// import logo from '../../assets/images/logo.jpg';
 
 const Header = ({handleStartNow}) => (
-  <div className='header'>
+  <header>
     <img src='https://pages.sisense.com/rs/601-OXE-081/images/2016-lp-logo-sisense-1.svg' alt='logo' className='logo' />
     <nav>
       <ul>
@@ -19,7 +18,7 @@ const Header = ({handleStartNow}) => (
         </li>
       </ul>
     </nav>
-  </div>
+  </header>
 );
 
 export default Header;

@@ -3,7 +3,7 @@ import './jumbotron.scss';
 import { Link } from 'react-router-dom'; 
 
 const Jumbotron = () => (
-  <div className='jumbotron'>
+  <section className='jumbotron'>
     <div className='shadow'>
       <h1><span>AGILE BI</span> FOR EVERYONE</h1>
       <div className='features'>
@@ -30,7 +30,7 @@ const Jumbotron = () => (
         <Link to={'/signups'} > Get list of all signups </Link>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Jumbotron;
