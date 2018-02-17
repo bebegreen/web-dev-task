@@ -1,5 +1,4 @@
 const Joi = require('joi');
-const saltRounds = 10;
 
 const schema = Joi.object().keys({
   firstName: Joi.string(),
